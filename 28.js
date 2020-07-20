@@ -110,22 +110,22 @@ $('#deal2').click(function() {
 
 lowerhand.click(function(card){
 		discardPile_lower.addCard(card);
-		discardPile_lower.render();
+		discardPile_lower.render({hideme:"showit"});
 		lowerhand.render();
 });
 lefthand.click(function(card){
 	discardPile_left.addCard(card);
-	discardPile_left.render();
+	discardPile_left.render({hideme:"showit"});
 	lefthand.render();
 });
 upperhand.click(function(card){
 	discardPile_upper.addCard(card);
-	discardPile_upper.render();
+	discardPile_upper.render({hideme:"showit"});
 	upperhand.render();
 });
 righthand.click(function(card){
 	discardPile_right.addCard(card);
-	discardPile_right.render();
+	discardPile_right.render({hideme:"showit"});
 	righthand.render();
 });
 

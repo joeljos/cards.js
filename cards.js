@@ -268,7 +268,7 @@ var cards = (function() {
           if(hideme == "hideit"){
             me.faceUp = false
           }
-          else {
+          else if (hideme == "showit") {
             me.faceUp = true
           }
           if (me.faceUp) {
