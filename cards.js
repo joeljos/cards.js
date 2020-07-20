@@ -14,7 +14,7 @@ var cards = (function() {
     cardsUrl: 'img/cards.png',
     blackJoker: false,
     redJoker: false,
-    type: STANDARD,
+    type: TWENTYEIGHT,
     loop: 1
   };
   var zIndexCounter = 1;
@@ -46,6 +46,10 @@ var cards = (function() {
         start = opt.acesHigh ? 2 : 1;
         end = start + 12;
         break;
+      case TWENTYEIGHT:
+        start = 7;
+        end = start + 7;
+        break;
       case EUCHRE:
         start = 9;
         end = start + 5;
@@ -54,6 +58,10 @@ var cards = (function() {
         start = 9;
         end = start + 5;
         opt.loop = 2;
+        break;
+      case CLEARDECK:
+        start = 2;
+        end = 2;
         break;
     }
 
@@ -233,6 +241,7 @@ var cards = (function() {
     render: function(options) {
       options = options || {};
       var speed = options.speed || opt.animationSpeed;
+      var hideme = options.hideme || {};
       this.calcPosition(options);
       for (var i = 0; i < this.length; i++) {
         var card = this[i];
@@ -256,6 +265,12 @@ var cards = (function() {
       var me = this;
       var flip = function() {
         for (var i = 0; i < me.length; i++) {
+          if(hideme == "hideit"){
+            me.faceUp = false
+          }
+          else {
+            me.faceUp = true
+          }
           if (me.faceUp) {
             me[i].showCard();
           } else {
