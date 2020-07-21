@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>28 - Round Initialiser</title>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="28.css"/>
+		<script src="jquery-1.7.min.js"></script>
+	</head>
+	<body>
+		<h1>28 - Round Initialiser</h1>
+	
+		<!-- <img class="preload" src="img/cards.png"/> -->
+
+		<div id="card-table">
+            <form action="/28/round_init" method="post">
+                <label for="name">Name:</label><br>
+				<input type="text" id="name" name="name"><br>
+				
+				<input type="radio" id="toption11" name="toption" value="Team 1 - Player 1">
+				<label for="toption11">Team 1 - Player 1</label><br>
+				<input type="radio" id="toption12" name="toption" value="Team 1 - Player 2">
+				<label for="toption12">Team 1 - Player 2</label><br>
+                <input type="radio" id="toption21" name="toption" value="Team 2 - Player 1">
+                <label for="toption21">Team 2 - Player 1</label><br>
+				<input type="radio" id="toption22" name="toption" value="Team 2 - Player 2">
+				<label for="toption22">Team 2 - Player 2</label><br>
+				
+                <input type="radio" id="position1" name="position" value="Dealer">
+                <label for="position1">Dealer</label><br>
+                <input type="radio" id="position2" name="position" value="First Turn">
+				<label for="position2">First Turn</label><br>
+				<input type="radio" id="position3" name="position" value="None of the above">
+                <label for="position3">None of the above</label><br>
+                <input type="submit" value="Submit">
+              </form>
+		</div>
+		
+		<!-- load this at the bottom so the #card-table element exists -->
+		<script src="28.js"></script>
+	</body>
+</html>
